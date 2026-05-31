@@ -1,0 +1,20 @@
+<html>
+<head><meta charset="utf-8"><style>
+  table { border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; }
+  th { background: #2c3e50; color: white; padding: 10px; text-align: left; }
+  td { padding: 8px; border-bottom: 1px solid #ddd; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  tr:hover { background: #e9ecef; }
+  .header { color: #666; font-size: 13px; margin-bottom: 15px; }
+  .footer { color: #999; font-size: 12px; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
+  .null { color: #aaa; font-style: italic; }
+  .num { text-align: right; }
+  .txt { text-align: left; }
+</style></head>
+<body>
+  <h3>{title}</h3>
+  <div class="header">{datetime} | {row_count} 行</div>
+  {table}
+  <div class="footer">此邮件由 Claude Code send-email 技能自动生成</div>
+</body>
+</html>

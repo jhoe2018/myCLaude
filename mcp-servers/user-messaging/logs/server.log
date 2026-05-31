@@ -1,0 +1,93 @@
+2026-05-31 18:41:52,252 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 18:41:52,596 [INFO] rid=init Redis 队列已就绪
+2026-05-31 18:41:52,596 [INFO] rid=1 initialize
+2026-05-31 18:41:52,596 [INFO] rid=2 initialized
+2026-05-31 18:41:52,601 [INFO] rid=3 tools/call health
+2026-05-31 18:41:52,607 [INFO] rid=exit user-messaging 退出
+2026-05-31 22:15:10,150 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:15:10,270 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:15:10,271 [INFO] rid=1 initialize
+2026-05-31 22:15:10,272 [INFO] rid=2 initialized
+2026-05-31 22:15:10,272 [INFO] rid=3 tools/call get_users
+2026-05-31 22:15:10,493 [ERROR] rid=3 tools/call get_users 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 706, in handle_request
+    result = func(**tool_args) if tool_args else func()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 252, in get_users
+    conn = _get_mysql_conn()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 237, in _get_mysql_conn
+    return pymysql.connect(
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 372, in __init__
+    self.connect()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 702, in connect
+    self._request_authentication()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 1000, in _request_authentication
+    auth_packet = self._read_packet()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+  File "E:\python3.9\lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "E:\python3.9\lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.OperationalError: (1698, "Access denied for user 'root'@'localhost'")
+2026-05-31 22:15:10,495 [INFO] rid=exit user-messaging 退出
+2026-05-31 22:15:52,604 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:15:52,706 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:15:52,706 [INFO] rid=1 initialize
+2026-05-31 22:15:52,707 [INFO] rid=2 initialized
+2026-05-31 22:15:52,707 [INFO] rid=3 tools/call get_users
+2026-05-31 22:15:52,866 [ERROR] rid=3 tools/call get_users 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 706, in handle_request
+    result = func(**tool_args) if tool_args else func()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 252, in get_users
+    conn = _get_mysql_conn()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 237, in _get_mysql_conn
+    return pymysql.connect(
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 372, in __init__
+    self.connect()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 702, in connect
+    self._request_authentication()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 1022, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+  File "E:\python3.9\lib\site-packages\pymysql\_auth.py", line 258, in caching_sha2_password_auth
+    return _roundtrip(conn, conn.password + b"\0")
+  File "E:\python3.9\lib\site-packages\pymysql\_auth.py", line 121, in _roundtrip
+    pkt = conn._read_packet()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+  File "E:\python3.9\lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "E:\python3.9\lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.OperationalError: (1049, "Unknown database 'jrm'")
+2026-05-31 22:15:52,868 [INFO] rid=exit user-messaging 退出
+2026-05-31 22:16:01,491 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:16:01,571 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:16:01,572 [INFO] rid=1 initialize
+2026-05-31 22:16:01,573 [INFO] rid=2 initialized
+2026-05-31 22:16:01,573 [INFO] rid=3 tools/call get_users
+2026-05-31 22:16:01,632 [ERROR] rid=3 tools/call get_users 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 706, in handle_request
+    result = func(**tool_args) if tool_args else func()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 252, in get_users
+    conn = _get_mysql_conn()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 237, in _get_mysql_conn
+    return pymysql.connect(
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 372, in __init__
+    self.connect()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 702, in connect
+    self._request_authentication()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 1022, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+  File "E:\python3.9\lib\site-packages\pymysql\_auth.py", line 245, in caching_sha2_password_auth
+    pkt = conn._read_packet()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+  File "E:\python3.9\lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "E:\python3.9\lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.OperationalError: (1049, "Unknown database 'jrm'")
+2026-05-31 22:16:01,634 [INFO] rid=exit user-messaging 退出

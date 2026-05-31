@@ -1,0 +1,23 @@
+{
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "root",
+    "password": "your_password",
+    "database": "your_database"
+  },
+  "smtp": {
+    "host": "smtp.qq.com",
+    "port": 465,
+    "user": "your_email@qq.com",
+    "password": "your_auth_code",
+    "ssl": true
+  },
+  "sms": {
+    "provider": "aliyun",
+    "access_key": "",
+    "secret_key": "",
+    "sign_name": "",
+    "template_code": ""
+  }
+}

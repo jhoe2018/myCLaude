@@ -1,0 +1,73 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(npm search *)",
+      "Bash(npm view *)",
+      "WebFetch(domain:github.com)",
+      "Bash(pip list *)",
+      "Bash(pip install *)",
+      "Read(//c/Users/jinru/.claude/**)",
+      "Read(//c/Users/jinru/.claude//**)",
+      "Bash(export UM_MYSQL_HOST=\"172.21.2.100\" UM_MYSQL_PORT=\"3306\" UM_MYSQL_USER=\"root\" UM_MYSQL_PASSWORD=\"123456\" UM_MYSQL_DATABASE=\"jrm\")"
+    ]
+  },
+  "mcpServers": {
+    "mysql": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-mysql@latest"
+      ],
+      "env": {
+        "MYSQL_HOST": "172.21.2.100",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "root",
+        "MYSQL_PASS": "123456",
+        "MYSQL_DB": "jrm"
+      }
+    },
+    "redis": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@liangshanli/mcp-server-redis"
+      ],
+      "env": {
+        "HOST": "172.21.2.100",
+        "PORT": "6379",
+        "PASSWORD": "",
+        "ALLOW_INSERT": "true",
+        "ALLOW_UPDATE": "true",
+        "ALLOW_DELETE": "true",
+        "ALLOW_CREATE": "true",
+        "ALLOW_DROP": "true"
+      }
+    },
+    "user-messaging": {
+      "command": "python",
+      "args": [
+        ".claude/mcp-servers/user-messaging/server.py"
+      ],
+      "env": {
+        "UM_MYSQL_HOST": "172.21.2.100",
+        "UM_MYSQL_PORT": "3306",
+        "UM_MYSQL_USER": "root",
+        "UM_MYSQL_PASSWORD": "123456",
+        "UM_MYSQL_DATABASE": "jrm",
+        "UM_SMTP_HOST": "smtp.qq.com",
+        "UM_SMTP_PORT": "465",
+        "UM_SMTP_USER": "653662099@qq.com",
+        "UM_SMTP_PASSWORD": "your_auth_code",
+        "UM_SMTP_SSL": "true",
+        "UM_AUTH_TOKEN": "",
+        "UM_LOG_LEVEL": "INFO",
+        "UM_REDIS_HOST": "127.0.0.1",
+        "UM_REDIS_PORT": "6379",
+        "UM_REDIS_PASSWORD": "",
+        "UM_REDIS_DB": "0",
+        "UM_QUEUE_MAX": "5000"
+      }
+    }
+  }
+}

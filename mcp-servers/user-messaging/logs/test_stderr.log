@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 610, in <module>
+    "batch_send":    batch_send,
+NameError: name 'batch_send' is not defined
