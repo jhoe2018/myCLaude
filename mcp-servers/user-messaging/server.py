@@ -706,7 +706,7 @@ def handle_request(msg: dict) -> None:
             result = func(**tool_args) if tool_args else func()
             if not isinstance(result, dict) or "ok" not in result:
                 result = {"ok": True, "data": result}
-            text = json.dumps(result, ensure_ascii=False, indent=2)
+            text = json.dumps(result, ensure_ascii=False, indent=2, default=str)
             _write(_rpc_ok(rid, {"content": [{"type": "text", "text": text}]}))
             _stats["requests_ok"] += 1
         except Exception as e:

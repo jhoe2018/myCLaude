@@ -91,3 +91,127 @@ Traceback (most recent call last):
     raise errorclass(errno, errval, sqlstate=sqlstate)
 pymysql.err.OperationalError: (1049, "Unknown database 'jrm'")
 2026-05-31 22:16:01,634 [INFO] rid=exit user-messaging 退出
+2026-05-31 22:26:47,754 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:26:47,854 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:26:47,854 [INFO] rid=1 initialize
+2026-05-31 22:26:47,855 [INFO] rid=2 initialized
+2026-05-31 22:26:47,856 [INFO] rid=3 tools/call get_users
+2026-05-31 22:26:47,902 [ERROR] rid=3 tools/call get_users 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 709, in handle_request
+    text = json.dumps(result, ensure_ascii=False, indent=2)
+  File "E:\python3.9\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "E:\python3.9\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "E:\python3.9\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "E:\python3.9\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "E:\python3.9\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+2026-05-31 22:26:47,909 [INFO] rid=4 tools/call get_users
+2026-05-31 22:26:47,939 [ERROR] rid=4 tools/call get_users 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 709, in handle_request
+    text = json.dumps(result, ensure_ascii=False, indent=2)
+  File "E:\python3.9\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "E:\python3.9\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "E:\python3.9\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "E:\python3.9\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "E:\python3.9\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "E:\python3.9\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+2026-05-31 22:26:47,940 [INFO] rid=exit user-messaging 退出
+2026-05-31 22:27:21,594 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:27:21,680 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:27:21,680 [INFO] rid=1 initialize
+2026-05-31 22:27:21,681 [INFO] rid=2 initialized
+2026-05-31 22:27:21,682 [INFO] rid=3 tools/call get_users
+2026-05-31 22:27:21,751 [INFO] rid=4 tools/call health
+2026-05-31 22:27:21,779 [INFO] rid=exit user-messaging 退出
+2026-05-31 22:47:28,610 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:47:28,701 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:47:28,702 [INFO] rid=1 initialize
+2026-05-31 22:47:28,703 [INFO] rid=- initialized
+2026-05-31 22:47:28,918 [INFO] rid=3 tools/call get_users
+2026-05-31 22:47:28,971 [ERROR] rid=3 tools/call get_users 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 706, in handle_request
+    result = func(**tool_args) if tool_args else func()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 252, in get_users
+    conn = _get_mysql_conn()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 237, in _get_mysql_conn
+    return pymysql.connect(
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 372, in __init__
+    self.connect()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 702, in connect
+    self._request_authentication()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 1000, in _request_authentication
+    auth_packet = self._read_packet()
+  File "E:\python3.9\lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+  File "E:\python3.9\lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "E:\python3.9\lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.OperationalError: (1698, "Access denied for user 'root'@'localhost'")
+2026-05-31 22:47:57,087 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:47:57,193 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:47:57,194 [INFO] rid=1 initialize
+2026-05-31 22:47:57,194 [INFO] rid=- initialized
+2026-05-31 22:47:57,406 [INFO] rid=3 tools/call get_users
+2026-05-31 22:47:57,477 [INFO] rid=4 tools/call batch_send
+2026-05-31 22:47:57,477 [ERROR] rid=4 tools/call batch_send 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 706, in handle_request
+    result = func(**tool_args) if tool_args else func()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 412, in batch_send
+    result = send_email(email, subj, content, is_html=is_html)
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 335, in send_email
+    msg.attach(MIMEText(body, content_type, "utf-8"))
+  File "E:\python3.9\lib\email\mime\text.py", line 42, in __init__
+    self.set_payload(_text, _charset)
+  File "E:\python3.9\lib\email\message.py", line 315, in set_payload
+    payload = payload.encode(charset.output_charset)
+UnicodeEncodeError: 'utf-8' codec can't encode character '\udc9a' in position 31: surrogates not allowed
+2026-05-31 22:50:51,098 [INFO] rid=init user-messaging v2.0.0 启动
+2026-05-31 22:50:51,177 [INFO] rid=init Redis 队列已就绪
+2026-05-31 22:50:51,178 [INFO] rid=1 initialize
+2026-05-31 22:50:51,178 [INFO] rid=- initialized
+2026-05-31 22:50:51,487 [INFO] rid=3 tools/call get_users
+2026-05-31 22:50:51,560 [INFO] rid=4 tools/call batch_send
+2026-05-31 22:50:51,560 [ERROR] rid=4 tools/call batch_send 异常
+Traceback (most recent call last):
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 706, in handle_request
+    result = func(**tool_args) if tool_args else func()
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 412, in batch_send
+    result = send_email(email, subj, content, is_html=is_html)
+  File "D:\www\pythonPrj\myAI\.claude\mcp-servers\user-messaging\server.py", line 335, in send_email
+    msg.attach(MIMEText(body, content_type, "utf-8"))
+  File "E:\python3.9\lib\email\mime\text.py", line 42, in __init__
+    self.set_payload(_text, _charset)
+  File "E:\python3.9\lib\email\message.py", line 315, in set_payload
+    payload = payload.encode(charset.output_charset)
+UnicodeEncodeError: 'utf-8' codec can't encode character '\udc9a' in position 31: surrogates not allowed

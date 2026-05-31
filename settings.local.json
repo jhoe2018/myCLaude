@@ -9,7 +9,9 @@
       "Bash(pip install *)",
       "Read(//c/Users/jinru/.claude/**)",
       "Read(//c/Users/jinru/.claude//**)",
-      "Bash(export UM_MYSQL_HOST=\"172.21.2.100\" UM_MYSQL_PORT=\"3306\" UM_MYSQL_USER=\"root\" UM_MYSQL_PASSWORD=\"123456\" UM_MYSQL_DATABASE=\"jrm\")"
+      "Bash(export UM_MYSQL_HOST=\"172.21.2.100\" UM_MYSQL_PORT=\"3306\" UM_MYSQL_USER=\"root\" UM_MYSQL_PASSWORD=\"123456\" UM_MYSQL_DATABASE=\"jrm\")",
+      "Skill(batch-mail)",
+      "Bash(/e/python3.9/python *)"
     ]
   },
   "mcpServers": {
@@ -58,7 +60,7 @@
         "UM_SMTP_HOST": "smtp.qq.com",
         "UM_SMTP_PORT": "465",
         "UM_SMTP_USER": "653662099@qq.com",
-        "UM_SMTP_PASSWORD": "your_auth_code",
+        "UM_SMTP_PASSWORD": "htudhinpaontbbid",
         "UM_SMTP_SSL": "true",
         "UM_AUTH_TOKEN": "",
         "UM_LOG_LEVEL": "INFO",
